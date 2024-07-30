@@ -17,6 +17,6 @@ async def user(user_id: int):
     return (f"Вы вошли как пользователь № {user_id}")
 
 
-@app.get("/user/{first_name}/{last_name}")
-async def info_user(first_name: str, last_name: int) -> dict:
-    return {"message": f"Информация о пользователе. Имя: {first_name}, Возраст: {last_name}"}
+@app.get("/user")
+async def info_user(first_name: str, age: int) -> dict:
+    return {"message": f"Информация о пользователе. Имя: {first_name}, Возраст: {age}"}
